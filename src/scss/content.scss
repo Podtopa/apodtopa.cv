@@ -1,0 +1,159 @@
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  user-select: none;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  & > &__left {
+    @include mobile {
+      padding-bottom: 0;
+    }
+
+    &__header, .header {
+      position: relative;
+
+      &__title {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+        color: $primary-color;
+      }
+
+      &__image {
+        width: 90%;
+        max-width: 30rem;
+        max-height: 30rem;
+        margin-bottom: 3rem;
+        border-radius: 50%;
+      }
+
+      &__circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        background: $accent-color;
+        border-radius: 50%;
+        z-index: -1;
+
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    background: $primary-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 2rem);
+      height: calc(100% - 4rem);
+      margin: 2rem 2rem 2rem 0;
+      border: 1px solid black;
+      border-left: 0;
+    }
+  }
+
+  &-left, &-right {
+    padding: 3rem;
+    width: 50%;
+
+    @include mobile {
+      width: auto;
+    }
+
+    &__section, .section {
+      margin-bottom: 2rem;
+
+      &__title {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+
+        &:after {
+          content: '';
+          display: block;
+          margin-top: 0.5rem;
+          width: 4rem;
+          height: 1px;
+          background: black;
+        }
+      }
+
+      &__text {
+
+      }
+
+      .list {
+        list-style: none;
+
+        &__item, .list-item {
+          &__title {
+
+          }
+
+          &__content {
+
+          }
+        }
+      }
+    }
+  }
+
+  .contacts, .skills, .languages {
+    .list {
+      &-item {
+        &__content {
+          &:before {
+            content: '•';
+          }
+        }
+      }
+    }
+  }
+
+  .skills {
+    .list-item__content {
+      color: $secondary-light;
+    }
+  }
+
+  .education {
+    .list {
+      &-item {
+        margin-bottom: 1rem;
+
+        &__title {
+          font-weight: bold;
+        }
+
+        &__content {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__copyrighting {
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+
+    @include mobile{
+      position: static;
+      padding: 1.5rem 3rem;
+      background: $primary-light;
+    }
+  }
+}

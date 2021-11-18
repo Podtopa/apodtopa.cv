@@ -1,0 +1,24 @@
+{
+  "name": "apodtopa.cv",
+  "version": "1.0.0",
+  "description": "Anastasiia Podtopa CV",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack ",
+    "start": "webpack --watch"
+  },
+  "author": "Anastasiia Podtopa",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.3.0",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0"
+  }
+}
